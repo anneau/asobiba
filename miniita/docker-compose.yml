@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  web:
+  web: &app_base
     build:
       context: ./src
       args:
@@ -20,8 +20,8 @@ services:
     restart: always
     command: yarn dev
 
-  # storybook:
-  #   <<: *app_base
-  #   ports:
-  #     - "${STORY_BOOK_PORT}:${STORY_BOOK_PORT}"
-  #   command: yarn storybook
+  storybook:
+    <<: *app_base
+    ports:
+      - "${STORY_BOOK_PORT}:${STORY_BOOK_PORT}"
+    command: yarn storybook
