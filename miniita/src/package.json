@@ -14,7 +14,9 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/pwa": "^2.6.0",
+    "bulma": "^0.7.5",
     "cross-env": "^5.2.0",
+    "font-awesome": "^4.7.0",
     "nuxt": "^2.4.0"
   },
   "devDependencies": {
