@@ -1,4 +1,12 @@
 import pkg from './package'
+const {
+  FIREBASE_PROJECT_ID,
+  FIREBASE_AUTH_DOMEIN,
+  FIREBASE_DATABASE_URL,
+  FIREBASE_STORAGE_BUCKET,
+  FIREBASE_MESSAGING_SENDER_ID,
+  FIREBASE_API_KEY,
+} = process.env
 
 export default {
   mode: 'universal',
@@ -35,6 +43,7 @@ export default {
   plugins: [
     { src: 'node_modules/bulma/bulma.sass', lang: 'sass' },
     { src: 'node_modules/font-awesome/scss/font-awesome.scss', lang: 'scss'},
+    { src: '~plugins/firebase.js' },
   ],
 
   /*
@@ -62,5 +71,14 @@ export default {
     extend(config, ctx) {
 
     }
+  },
+
+  env: {
+    FIREBASE_PROJECT_ID,
+    FIREBASE_AUTH_DOMEIN,
+    FIREBASE_DATABASE_URL,
+    FIREBASE_STORAGE_BUCKET,
+    FIREBASE_MESSAGING_SENDER_ID,
+    FIREBASE_API_KEY,
   }
 }
