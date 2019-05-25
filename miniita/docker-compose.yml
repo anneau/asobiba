@@ -1,19 +1,27 @@
 version: '3'
 
 services:
-  node:
+  web:
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: ./src
       args:
         NODE_VERSION: ${NODE_VERSION}
         APPLICATION_PATH: ${APPLICATION_PATH}
     tty: true
     working_dir: /var/www
+    volumes:
+      - ${APPLICATION_PATH}:/var/www
+      - /var/www/node_modules
+    ports:
+      - "${NUXT_PORT}:${NUXT_PORT}"
     environment:
       PORT: ${NUXT_PORT}
       HOST: ${HOST}
-    ports:
-      - "${NUXT_PORT}:${NUXT_PORT}"
-    command: yarn start
     restart: always
+    command: yarn dev
+
+  # storybook:
+  #   <<: *app_base
+  #   ports:
+  #     - "${STORY_BOOK_PORT}:${STORY_BOOK_PORT}"
+  #   command: yarn storybook
