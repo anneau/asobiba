@@ -1,5 +1,6 @@
 import { configure, addDecorator } from '@storybook/vue'
 import { withInfo } from 'storybook-addon-vue-info'
+import 'bulma/css/bulma.css'
 
 addDecorator(withInfo)
 

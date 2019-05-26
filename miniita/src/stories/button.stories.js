@@ -1,14 +1,23 @@
 import { storiesOf } from '@storybook/vue'
+import { withKnobs, text } from '@storybook/addon-knobs'
 
-import MyButton from '@/components/MyButton.vue'
+import AppButton from '@/components/atoms/AppButton.vue'
 
-storiesOf('Button', module)
+storiesOf('Buttons', module)
+  .addDecorator(withKnobs)
   .add(
-    'Button view',
-    () => ({
-      components: { MyButton },
-      template: '<my-button />',
-    }),
+    'AppButton',
+    () => {
+      return {
+        components: { AppButton },
+        props: {
+          text: {
+            default: text('Text', 'Button')
+          }
+        },
+        template: `<app-button :text="text" />`
+      };
+    },
     {
       info: {}
     }
