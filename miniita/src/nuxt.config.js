@@ -35,6 +35,7 @@ export default {
   plugins: [
     { src: 'node_modules/bulma/bulma.sass', lang: 'sass' },
     { src: 'node_modules/font-awesome/scss/font-awesome.scss', lang: 'scss'},
+    '~/plugins/global-components',
   ],
 
   /*

@@ -1,25 +1,15 @@
+
 <template>
-  <div class="container">
-    <app-header />
-    <nuxt />
-    <app-footer />
+  <div>
+    <the-nav-bar />
+    <div class="container">
+      <div class="columns">
+        <div class="column is-3">
+        </div>
+        <div class="column is-9">
+          <nuxt/>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
-
-<script>
-import AppHeader from './AppHeader'
-import AppFooter from './AppFooter'
-
-export default {
-  name: 'default',
-  components: {
-    AppHeader,
-    AppFooter
-  }
-}
-</script>
-
-
-<style lang="scss" scoped>
-
-</style>
