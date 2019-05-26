@@ -5,15 +5,14 @@
 * Please Install Docker and Docker-compose
 
 ```
-git clone -b NuxtWithStoryBook https://github.com/fussy113/MyNodeDock.git
+git clone https://github.com/anneau/asobiba.git
 
-cd MyNodeDock
+cd asobiba/miniita
 
 cp .env.example .env
 
-docker-compose build
-
-docker-compose run --rm node yarn install
-
 docker-compose up -d
+
+// もし新しいpackageをインストールしたい時
+docker-compose up --build
 ```
