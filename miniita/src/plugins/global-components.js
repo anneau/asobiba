@@ -6,6 +6,7 @@ import AppInputText from '~/components/atoms/AppInputText.vue';
 import AppButton from '~/components/atoms/AppButton.vue';
 import AppNotification from '~/components/atoms/AppNotification.vue';
 import AppSectionTitle from '~/components/atoms/AppSectionTitle.vue';
+import AppFileForm from '~/components/atoms/AppFileForm.vue';
 
 Vue.component('TheNavBar', TheNavBar);
 Vue.component('TheFooter', TheFooter);
@@ -14,3 +15,4 @@ Vue.component('AppInputText', AppInputText);
 Vue.component('AppButton', AppButton);
 Vue.component('AppNotification', AppNotification);
 Vue.component('AppSectionTitle', AppSectionTitle);
+Vue.component('AppFileForm', AppFileForm);
