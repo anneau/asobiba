@@ -1,10 +1,9 @@
 <template>
-  <button
+  <a
     :class="[color, size]"
-    class="button"
-    @click="$emit('clicked')">
+    class="button">
     {{ text }}
-  </button>
+  </a>
 </template>
 
 <script>
@@ -22,6 +21,14 @@ export default {
       type: String,
       default: '',
     },
-  },
+    color: {
+      type: String,
+      default: 'is-primary'
+    },
+    size: {
+      type: String,
+      default: 'is-default'
+    },
+  }
 };
 </script>
